@@ -12,10 +12,11 @@
     <link href="/css/default.css" rel="stylesheet" />
     <link href="/pages/home/home.css" rel="stylesheet" />
     <script src="/pages/home/home.js"></script>
+	<link href="../../css/Microsoft.VisualStudio.Blend.Html.Intrinsic.Multicolumn.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <!-- The content that will be loaded and displayed. -->
-    <div class="fragment homepage">
+    <div class="fragment homepage" style="background-color: #63973B;">
         <header aria-label="Header content" role="banner">
             <button class="win-backbutton" aria-label="Back" disabled></button>
             <h1 class="titlearea win-type-ellipsis">
@@ -23,8 +24,31 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <p>Hello</p>
+        
+			<table id="transactions" data-win-control="WinJS.Binding.Template">
+			<tbody>
+				<tr>
+					<td data-win-bind="innerText: transaction">Transaction</td>
+					<td data-win-bind="innerText: amount">Amount</td>
+					<td data-win-bind="innerText: type">Income/Expense</td>
+					<td data-win-bind="innerText: category">Category</td>
+				</tr>
+			</tbody>
+			</table>
+			<table style="width: 1090.5px;">
+				<tr>
+					<td><input type="text"></td>
+					<td><input type="number"></td>
+					<td><div data-win-control="WinJS.UI.ToggleSwitch" data-win-options="{labelOn:'Expense', labelOff:'Income'}" style="width: 146px;">
+						<option title="Groceries" value="g"></option>
+						<option title="Groceries" value="g"></option>
+						<option title="Groceries" value="g"></option>
+					</select></td>
+				</tr>
+			</table>
+		
         </section>
     </div>
+	
 </body>
 </html>
