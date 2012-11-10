@@ -13,6 +13,11 @@
     <link href="/pages/home/home.css" rel="stylesheet" />
     <script src="/pages/home/home.js"></script>
 	<link href="../../css/Microsoft.VisualStudio.Blend.Html.Intrinsic.Multicolumn.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="demo.css"media="screen">
+    <link rel="stylesheet" href="demo-print.css"media="print">
+    <script src="raphael.js"></script>
+    <script src="jquery.js"></script>
+    <script src="pie.js"></script>
 </head>
 <body>
     <!-- The content that will be loaded and displayed. -->
@@ -39,7 +44,8 @@
 				<tr>
 					<td><input type="text"></td>
 					<td><input type="number"></td>
-					<td><div data-win-control="WinJS.UI.ToggleSwitch" data-win-options="{labelOn:'Expense', labelOff:'Income'}" style="width: 146px;">
+					<td><div data-win-control="WinJS.UI.ToggleSwitch" data-win-options="{labelOn:'Expense', labelOff:'Income'}" style="width: 146px; stop-color: #CB2D2D;"></div></td>
+					<td><select id="transaction_categories" style="width: 219.5px; height: 31.5px;">
 						<option title="Groceries" value="g"></option>
 						<option title="Groceries" value="g"></option>
 						<option title="Groceries" value="g"></option>
