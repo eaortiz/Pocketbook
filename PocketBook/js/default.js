@@ -8,15 +8,11 @@
     var app = WinJS.Application;
     var activation = Windows.ApplicationModel.Activation;
     var nav = WinJS.Navigation;
-
-    function fill_table() {
-        
-    }
         
     app.addEventListener("activated", function (args) {
         if (args.detail.kind === activation.ActivationKind.launch) {
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
-                fill_table();
+                
             } else {
                 // TODO: This application has been reactivated from suspension.
                 // Restore application state here.
@@ -43,9 +39,6 @@
         // suspended, call args.setPromise().
         app.sessionState.history = nav.history;
     };
-    
-    var namespacePublicMembers = { fill_table : fill_table };
-    WinJS.Namespace.define("default", namespacePublicMembers);
 
     app.start();
 })();
